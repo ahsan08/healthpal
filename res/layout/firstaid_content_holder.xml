@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ViewFlipper
+        android:id="@+id/viewFlipperContents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:id="@+id/scroll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:text="@string/aed"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/scroll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:text="@string/aed"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/scroll3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:text="@string/choke"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </ScrollView>
+        
+        <ScrollView
+            android:id="@+id/scroll4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:text="@string/choke"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </ScrollView>
+        <ScrollView
+            android:id="@+id/scroll5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:text="@string/choke"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </ScrollView>
+        <ScrollView
+            android:id="@+id/scroll6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:text="@string/choke"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </ScrollView>
+        <ScrollView
+            android:id="@+id/scroll7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:text="@string/choke"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </ScrollView>
+        <ScrollView
+            android:id="@+id/scroll8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:text="@string/choke"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </ScrollView>
+    </ViewFlipper>
+
+</LinearLayout>

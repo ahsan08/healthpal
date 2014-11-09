@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HealthPal</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_signin">HealthPal Sign In</string>
+    <string name="sign_up_now">Sign Up Now</string>
+    <string name="title_activity_signup">HealthPal Sign Up</string>
+    <string name="first_aid">First Aid</string>
+    <string name="title_activity_marker_dialog">Marker Dialog</string>
+    <string name="title_activity_first_aid">First Aid</string>
+    <string name="cpr">dd</string>
+    <string name="aed">Defibrillation:\n  
+Attach an Automated External Defibrillator (AED) if it\'s available and follow the instructions given by AED.\n   
+An AED is a device that has been designed in a way that a person with little or no training can use it effectively and safely, to defibrillate a casualty within 60 seconds.\n   
+To operate an AED:\n  1. Turn the device on (there will be a clearly marked On/Off button).\n  2. Once the device is turned on, the device will start charging and provide audible prompts.\n  3. Follow all the instructions given by the AED.\n
+Safety considerations:\nAlways keep in mind the following safety considerations:\n  • Do not touch patient when shocking, make sure everyone is clear\n  • Do not use the AED in flammable environments\n  • Do not use the AED on casualties who are lying in water\n  • Do not use the AED on casualties who are lying on metal surfaces.  \n
+Indications for use:\n  The AED should be used on all unresponsive casualties who are inadequately breathing or not breathing.\n   
+Placement of pads:\n  Follow the manufacturer\’s directions for specific placement of pads on the casualty\’s body.\n   
+\n  1.  Using a razor (if provided), quickly remove excess hair to assist with adhesion of the pads.\n  2. Dry the chest of excessive moisture to assist with adhesion.\n   
+
+Using an AED on children:\n  There are specific child pads designed to reduce the size of the shock delivered to children aged 1 to 8, and they should always be used if available. If the AED does not have a pediatric mode or pediatric pads, then the standard adult AED and pads can be used. Ensure the pads do not touch each other on the child\’s chest. This may require the one pad to be placed on the center of the chest and the other one on their back, slightly to one side. If child pads are not available, you can use adult pads placed in the front and back position.\n
+Safety Note: AEDs should not be used on infants less than one year old.
+        
+    </string>
+    
+    <string name="choke">Foreign Body Airway Obstruction (Choking)
+Airway obstruction:   
+There are two types of airway obstruction:   Partial:  • Breathing is labored; • Breathing may be noisy; •Some escape of air can be felt from the mouth.  Complete:  •There may be efforts at breathing; •There is no sound of breathing; •There is no escape of air from nose and/or mouth.  
+Airway obstruction may not be apparent in the non-breathing unconscious victim until rescue breathing is attempted. .   
+Signs and symptoms:  The indications that someone may be struggling with an obstruction are:  • Panic • grasping the throat • Inability to speak • Inability to breathe • Color of face (pallor) • Inability to cough.  
+Treatment for choking adults and children   
+Effective Cough (Partial Airway Obstruction) • a casualty with an effective cough should be given reassurance and encouragement to keep coughing to expel the foreign material.  • If the obstruction is not relieved the rescuer should call an ambulance.    
+Ineffective Cough (Severe Airway Obstruction):  
+Conscious Victim • if the casualty is conscious, call an ambulance • Perform up to five sharp, back blows with the heel of one hand in the middle of the back between the shoulder blades. Check to see if each back blow has relieved the airway obstruction. The aim is to relieve the obstruction with each blow rather than to give all five blows.   
+Supporting the casualty / Delivering back blows  
+• If back blows are unsuccessful the rescuer should perform up to five chest thrusts. Check to see if each chest thrust has relieved the airway obstruction. The aim is to relieve the obstruction with each chest thrust rather than to give all five chest thrusts.   
+• To perform chest thrusts, identify the same compression point as for CPR and give up to five chest thrusts. These are similar to chest compressions but sharper and delivered at a slower rate. Children and adults may be treated in the sitting or standing position. If the obstruction is still not relieved, continue alternating five back blows with five chest thrusts.  
+                                   
+          Chest Thrusts:   
+Unconscious Victim The finger sweep can be used in the unconscious victim with an obstructed airway if solid material is visible in the airway. Commence CPR immediately!  
+Treatment for choking infants (less than 1 year):   
+The following procedure is for a choking infant:  • Check to see if the obstruction can be cleared using the finger sweep.  • lay the infant in a lying face down position over your forearm, supporting the baby’s face and body with your arm. The infant’s body should be inclined downwards to utilize the effects of gravity.  • Deliver up to five blows between the infant’s shoulder blades. If the obstruction is still present, turn the infant onto their back, again with the body inclined. • Deliver up to five chest thrusts between the infant’s nipples (breast bone) using two fingers.  • Repeat this process until the obstruction is cleared or the infant becomes unresponsive.  • Commence CPR if the infant becomes unresponsive.  
+        
+    </string>
+
+</resources>

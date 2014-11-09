@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/itemReload"
+        android:icon="@drawable/ic_action_reload"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom|withText"
+        android:title="Sign Out">
+    </item>
+    <item
+        android:id="@+id/itemSignOut"
+        android:icon="@drawable/ic_action_signout"
+        android:orderInCategory="100"
+        android:showAsAction="withText"
+        android:title="Sign Out">
+    </item>
+   
+    <item
+        android:id="@+id/itemAboutUs"
+        android:icon="@drawable/ic_action_aboutus"
+        android:orderInCategory="100"
+        android:showAsAction="withText"
+        android:title="About us">
+    </item>
+
+</menu>
