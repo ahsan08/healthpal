@@ -16,6 +16,8 @@ public class SplashActivity extends Activity {
 	public class PreloadData extends AsyncTask<String, String, String> {
 
 		private boolean signinStatus;
+		private boolean firstRun;
+		
 		@SuppressWarnings("unused")
 		private String username, password;
 
@@ -26,12 +28,23 @@ public class SplashActivity extends Activity {
 			signinStatus = signinPrefs.getBoolean("key_signinData", false);
 			username = signinPrefs.getString("key_username", "");
 			password = signinPrefs.getString("key_password", "");
+			
+			SharedPreferences languagePrefs = getSharedPreferences("LANGUAGE_PREFS", 0);
+			firstRun = languagePrefs.getBoolean("key_firstRun", true);
 		}
 
 		@Override
 		protected String doInBackground(String... params) {
-
-			if (signinStatus && hasNetworkConnection()) {
+            
+			if(firstRun)
+			{
+				Intent langIntent = new Intent(getApplicationContext(), LanguageActivity.class);
+                startActivity(langIntent);
+                finish();
+			}
+			
+			
+			else if (signinStatus && hasNetworkConnection()) {
 				signIn();
 			} else {
 				Intent loginIntent = new Intent(getApplicationContext(),

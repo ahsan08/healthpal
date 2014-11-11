@@ -541,71 +541,75 @@ containing a value of this type.
     }
     public static final class id {
         public static final int book_now=0x7f070010;
-        public static final int buttonCallAmbulance=0x7f07003e;
-        public static final int buttonCallHospital=0x7f07003d;
-        public static final int buttonSignUp=0x7f070020;
-        public static final int buttonSignin=0x7f07001a;
+        public static final int buttonCallAmbulance=0x7f070042;
+        public static final int buttonCallHospital=0x7f070041;
+        public static final int buttonSignUp=0x7f070024;
+        public static final int buttonSignin=0x7f07001e;
         public static final int buyButton=0x7f07000a;
         public static final int buy_now=0x7f07000f;
         public static final int buy_with_google=0x7f07000e;
-        public static final int checkBoxRememberLogin=0x7f070019;
+        public static final int checkBoxRememberLogin=0x7f07001d;
         public static final int classic=0x7f070011;
-        public static final int distance=0x7f070035;
-        public static final int editTextBloodgroup=0x7f07001e;
-        public static final int editTextEmail=0x7f07001d;
-        public static final int editTextFirstPassword=0x7f07001f;
-        public static final int editTextPassword=0x7f070018;
-        public static final int editTextUsername=0x7f070016;
+        public static final int distance=0x7f070039;
+        public static final int editTextBloodgroup=0x7f070022;
+        public static final int editTextEmail=0x7f070021;
+        public static final int editTextFirstPassword=0x7f070023;
+        public static final int editTextPassword=0x7f07001c;
+        public static final int editTextUsername=0x7f07001a;
         public static final int grayscale=0x7f070012;
         public static final int holo_dark=0x7f070005;
         public static final int holo_light=0x7f070006;
         public static final int hybrid=0x7f070004;
-        public static final int imageView1=0x7f070021;
-        public static final int itemAboutUs=0x7f070042;
-        public static final int itemFirstAid=0x7f07003f;
-        public static final int itemReload=0x7f070040;
-        public static final int itemSignOut=0x7f070041;
-        public static final int map=0x7f070036;
+        public static final int imageView1=0x7f070025;
+        public static final int itemAboutUs=0x7f070046;
+        public static final int itemFirstAid=0x7f070043;
+        public static final int itemReload=0x7f070044;
+        public static final int itemSignOut=0x7f070045;
+        public static final int lang_confirm=0x7f070018;
+        public static final int map=0x7f07003a;
         public static final int match_parent=0x7f07000c;
         public static final int monochrome=0x7f070013;
         public static final int none=0x7f070000;
         public static final int normal=0x7f070001;
-        public static final int placeName=0x7f070034;
+        public static final int placeName=0x7f070038;
         public static final int production=0x7f070007;
-        public static final int progressBar1=0x7f070022;
+        public static final int progressBar1=0x7f070026;
+        public static final int radio_bangla=0x7f070016;
+        public static final int radio_english=0x7f070017;
+        public static final int radio_lang=0x7f070015;
         public static final int sandbox=0x7f070008;
         public static final int satellite=0x7f070002;
-        public static final int scroll1=0x7f070024;
-        public static final int scroll2=0x7f070026;
-        public static final int scroll3=0x7f070028;
-        public static final int scroll4=0x7f07002a;
-        public static final int scroll5=0x7f07002c;
-        public static final int scroll6=0x7f07002e;
-        public static final int scroll7=0x7f070030;
-        public static final int scroll8=0x7f070032;
+        public static final int scroll1=0x7f070028;
+        public static final int scroll2=0x7f07002a;
+        public static final int scroll3=0x7f07002c;
+        public static final int scroll4=0x7f07002e;
+        public static final int scroll5=0x7f070030;
+        public static final int scroll6=0x7f070032;
+        public static final int scroll7=0x7f070034;
+        public static final int scroll8=0x7f070036;
         public static final int selectionDetails=0x7f07000b;
         public static final int strict_sandbox=0x7f070009;
         public static final int terrain=0x7f070003;
         public static final int textView1=0x7f070014;
-        public static final int textView2=0x7f070015;
-        public static final int textView3=0x7f070017;
-        public static final int textView4=0x7f07001b;
-        public static final int textViewAddress=0x7f070038;
-        public static final int textViewDistance=0x7f07003b;
-        public static final int textViewHospitalName=0x7f070037;
-        public static final int textViewLatitude=0x7f070039;
-        public static final int textViewLongitude=0x7f07003a;
-        public static final int textViewSignUp=0x7f07001c;
-        public static final int textViewTime=0x7f07003c;
-        public static final int tv1=0x7f070025;
-        public static final int tv2=0x7f070027;
-        public static final int tv3=0x7f070029;
-        public static final int tv4=0x7f07002b;
-        public static final int tv5=0x7f07002d;
-        public static final int tv6=0x7f07002f;
-        public static final int tv7=0x7f070031;
-        public static final int tv8=0x7f070033;
-        public static final int viewFlipperContents=0x7f070023;
+        public static final int textView2=0x7f070019;
+        public static final int textView3=0x7f07001b;
+        public static final int textView4=0x7f07001f;
+        public static final int textViewAddress=0x7f07003c;
+        public static final int textViewDistance=0x7f07003f;
+        public static final int textViewHospitalName=0x7f07003b;
+        public static final int textViewLatitude=0x7f07003d;
+        public static final int textViewLongitude=0x7f07003e;
+        public static final int textViewSignUp=0x7f070020;
+        public static final int textViewTime=0x7f070040;
+        public static final int tv1=0x7f070029;
+        public static final int tv2=0x7f07002b;
+        public static final int tv3=0x7f07002d;
+        public static final int tv4=0x7f07002f;
+        public static final int tv5=0x7f070031;
+        public static final int tv6=0x7f070033;
+        public static final int tv7=0x7f070035;
+        public static final int tv8=0x7f070037;
+        public static final int viewFlipperContents=0x7f070027;
         public static final int wrap_content=0x7f07000d;
     }
     public static final class integer {
@@ -613,15 +617,16 @@ containing a value of this type.
     }
     public static final class layout {
         public static final int activity_first_aid=0x7f030000;
-        public static final int activity_signin=0x7f030001;
-        public static final int activity_signup=0x7f030002;
-        public static final int activity_splash=0x7f030003;
-        public static final int apptheme_tab_indicator_holo=0x7f030004;
-        public static final int dialog_about_us=0x7f030005;
-        public static final int firstaid_content_holder=0x7f030006;
-        public static final int info_window=0x7f030007;
-        public static final int main=0x7f030008;
-        public static final int marker_dialog_layout=0x7f030009;
+        public static final int activity_language=0x7f030001;
+        public static final int activity_signin=0x7f030002;
+        public static final int activity_signup=0x7f030003;
+        public static final int activity_splash=0x7f030004;
+        public static final int apptheme_tab_indicator_holo=0x7f030005;
+        public static final int dialog_about_us=0x7f030006;
+        public static final int firstaid_content_holder=0x7f030007;
+        public static final int info_window=0x7f030008;
+        public static final int main=0x7f030009;
+        public static final int marker_dialog_layout=0x7f03000a;
     }
     public static final class menu {
         public static final int first_aid=0x7f0b0000;
@@ -629,9 +634,10 @@ containing a value of this type.
     }
     public static final class string {
         public static final int accept=0x7f050002;
-        public static final int aed=0x7f05002e;
+        public static final int aed=0x7f050036;
         public static final int app_name=0x7f050023;
-        public static final int choke=0x7f05002f;
+        public static final int button_signIn=0x7f050030;
+        public static final int choke=0x7f050037;
         /**   Text for notification shown when the Android Wear apps needs to be updated. Only shown on the wearable. [CHAR LIMIT=NONE] 
          */
         public static final int common_android_wear_notification_needs_update_text=0x7f050009;
@@ -731,43 +737,51 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f050020;
-        public static final int cpr=0x7f05002d;
+        public static final int cpr=0x7f050035;
         public static final int create_calendar_message=0x7f050005;
         public static final int create_calendar_title=0x7f050004;
         public static final int decline=0x7f050003;
-        public static final int first_aid=0x7f05002a;
+        public static final int first_aid=0x7f050029;
         public static final int hello_world=0x7f050024;
+        public static final int instruction_signIn=0x7f05002c;
+        public static final int isAccountAvailable_signIn=0x7f050031;
+        public static final int isSignIn_signIn=0x7f05002f;
         public static final int menu_settings=0x7f050025;
-        public static final int pref_default_display_name=0x7f050035;
-        public static final int pref_description_social_recommendations=0x7f050033;
+        public static final int password_signIn=0x7f05002e;
+        public static final int pref_default_display_name=0x7f05003e;
+        public static final int pref_description_social_recommendations=0x7f05003c;
         /**  Example settings for Data & Sync 
          */
-        public static final int pref_header_data_sync=0x7f050037;
+        public static final int pref_header_data_sync=0x7f050040;
         /**  Strings related to Settings 
  Example General settings 
          */
-        public static final int pref_header_general=0x7f050031;
+        public static final int pref_header_general=0x7f05003a;
         /**  Example settings for Notifications 
          */
-        public static final int pref_header_notifications=0x7f05003a;
-        public static final int pref_ringtone_silent=0x7f05003d;
-        public static final int pref_title_add_friends_to_messages=0x7f050036;
-        public static final int pref_title_display_name=0x7f050034;
-        public static final int pref_title_new_message_notifications=0x7f05003b;
-        public static final int pref_title_ringtone=0x7f05003c;
-        public static final int pref_title_social_recommendations=0x7f050032;
-        public static final int pref_title_sync_frequency=0x7f050038;
-        public static final int pref_title_system_sync_settings=0x7f050039;
-        public static final int pref_title_vibrate=0x7f05003e;
-        public static final int sign_up_now=0x7f050028;
+        public static final int pref_header_notifications=0x7f050043;
+        public static final int pref_ringtone_silent=0x7f050046;
+        public static final int pref_title_add_friends_to_messages=0x7f05003f;
+        public static final int pref_title_display_name=0x7f05003d;
+        public static final int pref_title_new_message_notifications=0x7f050044;
+        public static final int pref_title_ringtone=0x7f050045;
+        public static final int pref_title_social_recommendations=0x7f05003b;
+        public static final int pref_title_sync_frequency=0x7f050041;
+        public static final int pref_title_system_sync_settings=0x7f050042;
+        public static final int pref_title_vibrate=0x7f050047;
+        public static final int radioBangla=0x7f05002a;
+        public static final int radioEnglish=0x7f05002b;
         public static final int store_picture_message=0x7f050001;
         public static final int store_picture_title=0x7f050000;
-        public static final int title_activity_first_aid=0x7f05002c;
-        public static final int title_activity_marker_dialog=0x7f05002b;
-        public static final int title_activity_preferences=0x7f050030;
+        public static final int textButton=0x7f050038;
+        public static final int textButton_signIn=0x7f050032;
+        public static final int title_activity_first_aid=0x7f050034;
+        public static final int title_activity_marker_dialog=0x7f050033;
+        public static final int title_activity_preferences=0x7f050039;
         public static final int title_activity_signin=0x7f050027;
-        public static final int title_activity_signup=0x7f050029;
+        public static final int title_activity_signup=0x7f050028;
         public static final int title_activity_splash=0x7f050026;
+        public static final int username_signIn=0x7f05002d;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */

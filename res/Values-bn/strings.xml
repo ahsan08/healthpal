@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HealthPal</string>
+    <string name="instruction_signIn">ইউজারনেম ও পাসওয়ার্ডের ঘরগুলি পূরণ করুন</string>
+    <string name="username_signIn">ইউজারনেম:</string>
+    <string name="password_signIn">পাসওয়ার্ড:</string>
+    <string name="isSignIn_signIn">আমাকে সাইনড ইন রাখো</string>
+    <string name="button_signIn">সাইন ইন </string>
+    <string name="isAccountAvailable_signIn">আপনার কি একাউন্ট নেই?</string>
+    <string name="textButton_signIn">একাউন্ট </string>
+    <string name="textButton">একা </string>
+    
+    
+ 
+   
+    
+
+
+</resources>

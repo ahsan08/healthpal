@@ -2,6 +2,7 @@ package javafeast.therap.healthpal;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -15,6 +16,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -37,6 +39,7 @@ public class SigninActivity extends Activity implements OnClickListener {
 	public class signinUser extends AsyncTask<String, String, String> {
 
 		boolean flag;
+		
 
 		ProgressDialog pDialog;
 		JSONParser jsonParser = new JSONParser();
@@ -124,16 +127,26 @@ public class SigninActivity extends Activity implements OnClickListener {
 	Button signinButton;
 	TextView tvSignup;
 	CheckBox checkSignedIn;
-
+	String language;
 	String username, password;
 	boolean isSigninSaving;
 
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		SharedPreferences languagePrefs = getSharedPreferences("LANGUAGE_PREFS", 0);
+		language = languagePrefs.getString("key_language", "");
+		//if(language=="bn")
+			localeChange(language);
+		
+		//localeChange("bn");
+		
 		setContentView(R.layout.activity_signin);
 
 		initializeComponent();
+		Toast.makeText(getApplicationContext(), language, Toast.LENGTH_LONG).show();
 	}
 
 	private void initializeComponent() {
@@ -276,5 +289,17 @@ public class SigninActivity extends Activity implements OnClickListener {
 					haveConnectedMobile = true;
 		}
 		return haveConnectedWifi || haveConnectedMobile;
+	}
+
+	
+	
+	public void localeChange(String localeCode)
+	{
+		Locale locale = new Locale(localeCode);
+		Locale.setDefault(locale);
+		Configuration config = new Configuration();
+		config.locale = locale;
+		getBaseContext().getResources().updateConfiguration(config,
+		      getBaseContext().getResources().getDisplayMetrics());
 	}
 }

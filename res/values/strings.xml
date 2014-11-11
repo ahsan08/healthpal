@@ -6,9 +6,21 @@
     <string name="menu_settings">Settings</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_signin">HealthPal Sign In</string>
-    <string name="sign_up_now">Sign Up Now</string>
     <string name="title_activity_signup">HealthPal Sign Up</string>
     <string name="first_aid">First Aid</string>
+    <string name="radioBangla">Bangla</string>
+    <string name="radioEnglish">English</string>
+    
+    
+    <string name="instruction_signIn">Enter your username and password to sign in</string>
+    <string name="username_signIn">Username:</string>
+    <string name="password_signIn">Password:</string>
+    <string name="isSignIn_signIn">Keep me signed in</string>
+    <string name="button_signIn">Sign in</string>
+    <string name="isAccountAvailable_signIn">Don\'t have an account?</string>
+    <string name="textButton_signIn">Sign Up Now</string>
+    
+    
     <string name="title_activity_marker_dialog">Marker Dialog</string>
     <string name="title_activity_first_aid">First Aid</string>
     <string name="cpr">dd</string>

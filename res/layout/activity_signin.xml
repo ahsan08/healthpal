@@ -16,7 +16,7 @@
             android:layout_margin="5sp"
             android:layout_marginBottom="15sp"
             android:layout_marginTop="15sp"
-            android:text="Enter your username and password to sign in"
+            android:text="@string/instruction_signIn"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <LinearLayout
@@ -29,7 +29,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Username:"
+                android:text="@string/username_signIn"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <EditText
@@ -46,7 +46,7 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Password:"
+                android:text="@string/password_signIn"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <EditText
@@ -60,7 +60,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="15sp"
-                android:text="Keep me signed in" />
+                android:text="@string/isSignIn_signIn" />
 
             <Button
                 android:id="@+id/buttonSignin"
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="25sp"
-                android:text="Sign In"
+                android:text="@string/button_signIn"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -85,14 +85,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5sp"
-                android:text="Don't have an account?"
+                android:text="@string/isAccountAvailable_signIn"
                 android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/textViewSignUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sign_up_now"
+                android:text="@string/textButton_signIn"
                 android:textColor="#C80000"
                 android:textSize="15sp"
                 android:textStyle="bold" />
