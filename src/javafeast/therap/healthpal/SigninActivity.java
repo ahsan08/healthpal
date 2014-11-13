@@ -36,98 +36,12 @@ import android.widget.Toast;
 
 public class SigninActivity extends Activity implements OnClickListener {
 
-	public class signinUser extends AsyncTask<String, String, String> {
-
-		boolean flag;
-		
-
-		ProgressDialog pDialog;
-		JSONParser jsonParser = new JSONParser();
-
-//		private static final String SIGNIN_URL = "http://1healthpal.fh2web.com/Server/Server/user_login.php";
-		private static final String SIGNIN_URL = "http://2healthpal.fh2web.com/Server/log_in_user.php";
-		private static final String TAG_SUCCESS = "success";
-
-		@Override
-		protected void onPreExecute() {
-
-			pDialog = new ProgressDialog(SigninActivity.this);
-			pDialog.setMessage("Please wait while you are signed in");
-			pDialog.setIndeterminate(false);
-			pDialog.setCancelable(true);
-			pDialog.show();
-
-			super.onPreExecute();
-		}
-
-		@Override
-		protected String doInBackground(String... params) {
-
-			List<NameValuePair> parameter = new ArrayList<NameValuePair>();
-			parameter.add(new BasicNameValuePair("mail", username));
-			parameter.add(new BasicNameValuePair("pass", password));
-
-			JSONObject json = jsonParser.makeHttpRequest(SIGNIN_URL, "POST",
-					parameter);
-
-			try {
-				int success = json.getInt(TAG_SUCCESS);
-				if (success == 1) {
-					flag = true;
-				} else {
-					flag = false;
-				}
-			} catch (JSONException e) {
-				Toast.makeText(getApplicationContext(),
-						"Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-			}
-			return null;
-		}
-
-		@Override
-		protected void onPostExecute(String result) {
-
-			pDialog.dismiss();
-
-			if (flag) {
-
-				Toast.makeText(getApplicationContext(),
-						"You are now signed in!", Toast.LENGTH_LONG).show();
-
-				Intent intent = new Intent(getApplicationContext(), Main.class);
-				startActivity(intent);
-			} else {
-
-				AlertDialog.Builder dBuilder = new AlertDialog.Builder(
-						SigninActivity.this);
-
-				dBuilder.setIcon(R.drawable.ic_dialog_alert);
-				dBuilder.setTitle("Sign In failed!");
-				dBuilder.setMessage("You are not signed in! Please check your username and password are correct then try again.");
-				dBuilder.setNeutralButton("Ok",
-						new DialogInterface.OnClickListener() {
-
-							@Override
-							public void onClick(DialogInterface dialog,
-									int which) {
-								dialog.cancel();
-							}
-						});
-				dBuilder.setCancelable(true);
-
-				AlertDialog signInAlert = dBuilder.create();
-				signInAlert.show();
-
-			}
-		}
-
-	}
+	
 
 	EditText etUsername, etPassword;
 	Button signinButton;
 	TextView tvSignup;
 	CheckBox checkSignedIn;
-	String language;
 	String username, password;
 	boolean isSigninSaving;
 
@@ -135,18 +49,13 @@ public class SigninActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		SharedPreferences languagePrefs = getSharedPreferences("LANGUAGE_PREFS", 0);
-		language = languagePrefs.getString("key_language", "");
-		//if(language=="bn")
-			localeChange(language);
-		
-		//localeChange("bn");
+			
+		localeInitialize();
 		
 		setContentView(R.layout.activity_signin);
 
 		initializeComponent();
-		Toast.makeText(getApplicationContext(), language, Toast.LENGTH_LONG).show();
+		
 	}
 
 	private void initializeComponent() {
@@ -156,7 +65,17 @@ public class SigninActivity extends Activity implements OnClickListener {
 		tvSignup = (TextView) findViewById(R.id.textViewSignUp);
 		checkSignedIn = (CheckBox) findViewById(R.id.checkBoxRememberLogin);
 
-		SpannableString content = new SpannableString("Sign Up Now");
+		SpannableString content;
+		SharedPreferences languagePrefs = getSharedPreferences(
+				"LANGUAGE_PREFS", 0);
+		String language = languagePrefs.getString("key_language", "");
+		
+		if(language.equals("bn"))
+		
+			content= new SpannableString("একাউন্ট তৈরি করুন");
+		else
+			content= new SpannableString("Sign Up Now");
+			
 		content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
 		tvSignup.setText(content);
 
@@ -293,6 +212,7 @@ public class SigninActivity extends Activity implements OnClickListener {
 
 	
 	
+	
 	public void localeChange(String localeCode)
 	{
 		Locale locale = new Locale(localeCode);
@@ -302,4 +222,106 @@ public class SigninActivity extends Activity implements OnClickListener {
 		getBaseContext().getResources().updateConfiguration(config,
 		      getBaseContext().getResources().getDisplayMetrics());
 	}
+	
+	public void localeInitialize()
+	{
+		SharedPreferences languagePrefs = getSharedPreferences(
+				"LANGUAGE_PREFS", 0);
+		String language = languagePrefs.getString("key_language", "");
+		
+		if(language.equals("bn"))
+		localeChange(language);
+		
+	}
+	
+	
+	public class signinUser extends AsyncTask<String, String, String> {
+
+		boolean flag;
+		
+
+		ProgressDialog pDialog;
+		JSONParser jsonParser = new JSONParser();
+
+
+		private static final String SIGNIN_URL = "http://2healthpal.fh2web.com/Server/log_in_user.php";
+		private static final String TAG_SUCCESS = "success";
+
+		@Override
+		protected void onPreExecute() {
+
+			pDialog = new ProgressDialog(SigninActivity.this);
+			pDialog.setMessage("Please wait while you are signed in");
+			pDialog.setIndeterminate(false);
+			pDialog.setCancelable(true);
+			pDialog.show();
+
+			super.onPreExecute();
+		}
+
+		@Override
+		protected String doInBackground(String... params) {
+
+			List<NameValuePair> parameter = new ArrayList<NameValuePair>();
+			parameter.add(new BasicNameValuePair("mail", username));
+			parameter.add(new BasicNameValuePair("pass", password));
+
+			JSONObject json = jsonParser.makeHttpRequest(SIGNIN_URL, "POST",
+					parameter);
+
+			try {
+				int success = json.getInt(TAG_SUCCESS);
+				if (success == 1) {
+					flag = true;
+				} else {
+					flag = false;
+				}
+			} catch (JSONException e) {
+				Toast.makeText(getApplicationContext(),
+						"Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+			}
+			return null;
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+
+			pDialog.dismiss();
+
+			if (flag) {
+
+				Toast.makeText(getApplicationContext(),
+						"You are now signed in!", Toast.LENGTH_LONG).show();
+
+				Intent intent = new Intent(getApplicationContext(), Main.class);
+				startActivity(intent);
+				finish();
+			} else {
+
+				AlertDialog.Builder dBuilder = new AlertDialog.Builder(
+						SigninActivity.this);
+
+				dBuilder.setIcon(R.drawable.ic_dialog_alert);
+				dBuilder.setTitle("Sign In failed!");
+				dBuilder.setMessage("You are not signed in! Please check your username and password are correct then try again.");
+				dBuilder.setNeutralButton("Ok",
+						new DialogInterface.OnClickListener() {
+
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+								dialog.cancel();
+							}
+						});
+				dBuilder.setCancelable(true);
+
+				AlertDialog signInAlert = dBuilder.create();
+				signInAlert.show();
+
+			}
+		}
+
+	}
+	
+	
 }

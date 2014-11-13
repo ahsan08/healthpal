@@ -35,7 +35,8 @@ public class SignupActivity extends Activity implements OnClickListener {
 //		private static final String SIGNUP_URL = "http://1healthpal.fh2web.com/Server/Server/item_insert.php";
 		private static final String SIGNUP_URL = "http://2healthpal.fh2web.com/Server/sign_up_user.php";
 		private static final String TAG_SUCCESS = "success";
-		boolean flag;
+		boolean flag, redundantData;
+		
 
 		@Override
 		protected void onPreExecute() {
@@ -61,7 +62,10 @@ public class SignupActivity extends Activity implements OnClickListener {
 
 			try {
 				int success = json.getInt(TAG_SUCCESS);
-				if (success == 1) {
+				if(success == 2)
+					redundantData= true;
+					
+				else if (success == 1) {
 					flag = true;
 				} else {
 					flag = false;
@@ -79,6 +83,9 @@ public class SignupActivity extends Activity implements OnClickListener {
 
 			pDialog.dismiss();
 
+			if(redundantData)
+				Toast.makeText(getApplicationContext(), "The Username already exist!!", Toast.LENGTH_LONG).show();
+			else
 			if (flag) {
 				Toast.makeText(
 						getApplicationContext(),

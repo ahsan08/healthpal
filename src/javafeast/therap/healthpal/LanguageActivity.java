@@ -9,7 +9,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
+
 
 public class LanguageActivity extends Activity {
 
@@ -32,20 +32,26 @@ public class LanguageActivity extends Activity {
 				
 				SharedPreferences languagePrefs = getSharedPreferences("LANGUAGE_PREFS", 0);
 				SharedPreferences.Editor editor = languagePrefs.edit();
-				if(langSelect.getText()=="Bangla")
-					
-					editor.putString("key_language", "bn");
+				String radioText = (String) langSelect.getText();
 				
-                
+				
+				if(radioText.equals("English"))
+					editor.putString("key_language", "");
+
+				else		
+					editor.putString("key_language", "bn");
+
+				
+				
 				editor.putBoolean("key_firstRun", false);
 				editor.commit();
 				
-				Toast.makeText(getApplicationContext(), "languageActivity"+ langSelect.getText(), Toast.LENGTH_LONG).show();
 				
 				
 				
-				Intent i = new Intent(getApplicationContext(), SigninActivity.class);
-				startActivity(i);
+				Intent signIn = new Intent(getApplicationContext(), SigninActivity.class);
+		
+				startActivity(signIn);
 				finish();
 				
 			}

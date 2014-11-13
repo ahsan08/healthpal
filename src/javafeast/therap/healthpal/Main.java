@@ -63,7 +63,7 @@ public class Main extends FragmentActivity implements
 	String distance;
 	String end_address;
 
-	//private static String url_markers = "http://1healthpal.fh2web.com/Server/Server/fetch_markers.php";
+	
 	private static String url_markers = "http://2healthpal.fh2web.com/Server/fetch_markers.php";
 	LatLng ll;
 
@@ -208,7 +208,7 @@ public class Main extends FragmentActivity implements
 				d.show();
 
 			}
-		});
+		}); 
 
 	}
 
@@ -476,7 +476,7 @@ public class Main extends FragmentActivity implements
 
 			}
 			
-			//pDialog.dismiss();
+			
 		}
 
 	}
