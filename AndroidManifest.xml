@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="17"
         android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -24,6 +24,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -52,6 +53,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="javafeast.therap.healthpal.GetphNumber" >
+        </activity>
         <activity
             android:name="javafeast.therap.healthpal.SigninActivity"
             android:label="@string/title_activity_signin" >
@@ -60,15 +63,11 @@
             android:name="javafeast.therap.healthpal.SignupActivity"
             android:label="@string/title_activity_signup" >
         </activity>
-        
         <activity
             android:name="javafeast.therap.healthpal.FirstAidActivity"
             android:label="@string/title_activity_first_aid" >
         </activity>
-        
-        <activity 
-            android:name="javafeast.therap.healthpal.LanguageActivity">
-            
+        <activity android:name="javafeast.therap.healthpal.LanguageActivity" >
         </activity>
     </application>
 

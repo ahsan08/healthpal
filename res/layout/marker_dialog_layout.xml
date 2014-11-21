@@ -47,6 +47,7 @@
                 android:layout_height="wrap_content"
                 android:padding="3sp"
                 android:text="Address: " />
+
             <TextView
                 android:id="@+id/textViewLatitude"
                 android:layout_width="wrap_content"

@@ -7,11 +7,54 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_signin">HealthPal Sign In</string>
     <string name="title_activity_signup">HealthPal Sign Up</string>
-    <string name="first_aid">First Aid</string>
+    <string name="first_aid">Search</string>
     <string name="radioBangla">Bangla</string>
     <string name="radioEnglish">English</string>
     
     
+    <string-array name="bloodGroupArray">
+        <item>A+</item>
+        <item>B+</item>
+        <item>AB+</item>
+        <item>O+</item>
+        <item>A-</item>
+        <item>B-</item>
+        <item>AB-</item>
+        <item>O-</item>
+    </string-array>
+    
+    
+      <string-array name="CityNameArray">
+        <item>All</item>  
+        <item>Dhaka</item>
+        <item>Chittagong</item>
+        <item>Khulna</item>
+        <item>Sylhet</item>
+        <item>Rajshahi</item>
+        <item>Borishal</item>
+        <item>Rongpur</item>
+        <item>Bogra</item>
+       </string-array>
+       
+      
+      <string-array name="RatingArray">
+        <item>All</item>  
+        <item>Below 2</item>
+        <item>Between 2 and 4 </item>
+        <item>Between 4+</item>
+       </string-array>
+       
+      <string-array name="SpecialityArray">
+        <item>All</item>  
+        <item>General</item>
+        <item>Surgury</item>
+        <item>Child</item>
+        <item>Eye</item>
+       </string-array>
+    
+    
+    
+    <!-- Sign In Strings-->
     <string name="instruction_signIn">Enter your username and password to sign in</string>
     <string name="username_signIn">Username:</string>
     <string name="password_signIn">Password:</string>
@@ -19,6 +62,17 @@
     <string name="button_signIn">Sign in</string>
     <string name="isAccountAvailable_signIn">Don\'t have an account?</string>
     <string name="textButton_signIn">Sign Up Now</string>
+    
+    
+    <!-- Sign In Strings-->
+    <string name="instruction_signUp">Enter your email address and choose a password.</string>
+    <string name="email_signUp">*Email Address:</string>
+    <string name="password_signUp">*Password:</string>
+    <string name="blood_signUp">*Blood Group:</string>
+    <string name="signUp_signUp">Sign Up</string>
+    
+    
+    
     
     
     <string name="title_activity_marker_dialog">Marker Dialog</string>

@@ -2,6 +2,9 @@
 <resources>
 
     <string name="app_name">HealthPal</string>
+    
+    
+    <!-- Sign In Strings-->
     <string name="instruction_signIn">ইউজারনেম ও পাসওয়ার্ডের ঘরগুলি পূরণ করুন</string>
     <string name="username_signIn">ইউজারনেম:</string>
     <string name="password_signIn">পাসওয়ার্ড:</string>
@@ -10,8 +13,47 @@
     <string name="isAccountAvailable_signIn">আপনার কি একাউন্ট নেই?</string>
     <string name="textButton_signIn">একাউন্ট </string>
     <string name="textButton">একা </string>
+     
+    <string-array name="bloodGroupArray">
+        <item>A+</item>
+        <item>B+</item>
+        <item>AB+</item>
+        <item>O+</item>
+        <item>A-</item>
+        <item>B-</item>
+        <item>AB-</item>
+        <item>O-</item>
+    </string-array>
+    
+    <string-array name="CityNameArray">
+        <item>সবগুলো</item>
+        <item>ঢাকা</item>
+        <item>চট্টগ্রাম</item>
+        <item>খুলনা</item>
+        <item>সিলেট</item>
+        <item>রাজশাহী।</item>
+        <item>বরিশাল</item>
+        <item>রংপুর</item>
+        <item>বগুড়া</item>
+       </string-array>
+       
+     <string-array name="RatingArray">
+        <item>সবগুলো</item> 
+        <item>২ এর নিচে</item>
+        <item>২ থেকে ৪ এর মধ্যে</item>
+        <item>৪ এর উপরে</item>
+       </string-array>
+    
+     <string-array name="SpecialityArray">
+        <item>সবগুলো</item>  
+        <item>সাধারণ</item>
+        <item>সার্জারি</item>
+        <item>শিশু</item>
+        <item>চক্ষু</item>
+       </string-array>
     
     
+    <!-- Sign Up Strings-->
  
    
     

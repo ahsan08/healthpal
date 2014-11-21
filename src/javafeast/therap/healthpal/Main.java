@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import javafeast.therap.healthpal.extras.MapValues;
+
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,10 +32,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
@@ -63,8 +68,8 @@ public class Main extends FragmentActivity implements
 	String distance;
 	String end_address;
 
-	
-	private static String url_markers = "http://2healthpal.fh2web.com/Server/fetch_markers.php";
+	private static String url_static_markers = "http://2healthpal.fh2web.com/Server/fetch_markers.php";
+	private static String url_parameterized_markers = "http://2healthpal.fh2web.com/Server/fetch_param_markers.php";
 	LatLng ll;
 
 	private static final String TAG_SUCCESS = "success";
@@ -75,9 +80,16 @@ public class Main extends FragmentActivity implements
 	private static final String TAG_LAT = "hLat";
 	private static final String TAG_LONG = "hLng";
 	public static final String TAG_HNAME = "hName";
+	boolean parameterizedUrl= false;
 
 	private ProgressDialog pDialog;
-
+	MapValues searchValues;
+	
+	Spinner spCity, spSpeciality, spDistance, spRating;
+	Button btnCancel, btnSearch;
+	
+	String cityName, ratingValue, hospitalDistance, speciality; 
+	Dialog searchDialog;
 	JSONParser jsonParser = new JSONParser();
 	ArrayList<HashMap<String, String>> markerList;
 	JSONArray markers = null;
@@ -93,13 +105,16 @@ public class Main extends FragmentActivity implements
 					.permitAll().build();
 			StrictMode.setThreadPolicy(policy);
 		}
-
+		
+		
+		
 		md = new GMapV2Direction();
 		mMap = ((SupportMapFragment) getSupportFragmentManager()
 				.findFragmentById(R.id.map)).getMap();
 
 		mLocationClient = new LocationClient(this, this, this);
 		mLocationClient.connect();
+		
 
 		mMap.setInfoWindowAdapter(new InfoWindowAdapter() {
 
@@ -337,10 +352,20 @@ public class Main extends FragmentActivity implements
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.itemFirstAid:
-			Intent aidIntent = new Intent(getApplicationContext(),
-					FirstAidActivity.class);
-			startActivity(aidIntent);
+		case R.id.itemSearch:
+			
+			
+			
+			searchDialog = new Dialog(Main.this);
+			searchDialog.setContentView(R.layout.search_dialog_layout);
+			searchDialog.setTitle("Enter Search Criteria");
+			searchValues = new MapValues();
+			
+			initDialogComponent();
+			handleListeners();
+			
+			searchDialog.show();
+			
 			return true;
 		case R.id.itemSignOut:
 			Intent intent = new Intent(getApplicationContext(),
@@ -368,6 +393,38 @@ public class Main extends FragmentActivity implements
 		default:
 			return super.onOptionsItemSelected(item);
 		}
+	}
+
+	
+
+	private void initDialogComponent() {
+		spCity = (Spinner) searchDialog.findViewById(R.id.spinnerCity);
+		spSpeciality = (Spinner) searchDialog.findViewById(R.id.spinnerSpeciality);
+		spDistance = (Spinner) searchDialog.findViewById(R.id.spinnerDistance);
+		spRating = (Spinner) searchDialog.findViewById(R.id.spinnerRating);
+		
+		btnCancel = (Button) searchDialog.findViewById(R.id.buttonCancel);
+		btnSearch = (Button) searchDialog.findViewById(R.id.buttonSearch);
+		//searchValues = new MapValues();
+		
+		
+		ArrayAdapter<CharSequence> cityAdapter, specialityAdapter, ratingAdapter;
+		
+		
+		cityAdapter = ArrayAdapter.createFromResource(this,
+				R.array.CityNameArray, android.R.layout.simple_spinner_item);
+		specialityAdapter = ArrayAdapter.createFromResource(this,
+				R.array.SpecialityArray, android.R.layout.simple_spinner_item);
+		ratingAdapter = ArrayAdapter.createFromResource(this,
+				R.array.RatingArray, android.R.layout.simple_spinner_item);
+
+		cityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		specialityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		ratingAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+		spCity.setAdapter(cityAdapter);
+		spSpeciality.setAdapter(specialityAdapter);
+		spRating.setAdapter(ratingAdapter);
 	}
 
 	@Override
@@ -398,6 +455,110 @@ public class Main extends FragmentActivity implements
 		AlertDialog quitAlert = dBuilder.create();
 		quitAlert.show();
 	}
+	
+	
+	
+	private void handleListeners() {
+		spCity.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> arg0, View arg1,
+					int arg2, long arg3) {
+				
+				
+				
+				int position= spCity.getSelectedItemPosition();
+				cityName = searchValues.getCityNames(position);
+				
+				
+				
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				
+			}
+		});
+		
+		
+		spDistance.setOnItemSelectedListener(new OnItemSelectedListener() {
+			
+			@Override
+			public void onItemSelected(AdapterView<?> arg0, View arg1,
+					int arg2, long arg3) {
+				
+				//TODO
+			}
+			
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				
+			}
+		});
+		
+		
+		spSpeciality.setOnItemSelectedListener(new OnItemSelectedListener() {
+			
+			@Override
+			public void onItemSelected(AdapterView<?> arg0, View arg1,
+					int arg2, long arg3) {
+				  
+				int position= spSpeciality.getSelectedItemPosition();
+				speciality = searchValues.getSpeciality(position);
+				
+			}
+			
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				
+			}
+		});
+		
+		
+		
+		spRating.setOnItemSelectedListener(new OnItemSelectedListener() {
+			
+			@Override
+			public void onItemSelected(AdapterView<?> arg0, View arg1,
+					int arg2, long arg3) {
+				
+				 int position= spRating.getSelectedItemPosition();
+				 ratingValue = searchValues.getRating(position);
+				
+			}
+			
+			@Override
+			public void onNothingSelected(AdapterView<?> arg0) {
+				
+			}
+		});
+		
+		
+		btnCancel.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				searchDialog.dismiss();
+				
+			}
+		});
+		
+		btnSearch.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Toast.makeText(getApplicationContext(), cityName+"  "+speciality+" "+ ratingValue, Toast.LENGTH_LONG).show();
+				//parameterizedUrl = true;
+				//puttingMarkers();
+				
+			}
+		});
+	}
+	
+	
+	
+	
 
 	class LoadingMarkers extends AsyncTask<String, String, String> {
 
@@ -416,8 +577,18 @@ public class Main extends FragmentActivity implements
 
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 
-			JSONObject json = jsonParser.makeHttpRequest(url_markers, "GET",
+			JSONObject json;
+			if(parameterizedUrl)
+				
+			json= jsonParser.makeHttpRequest(url_parameterized_markers, "GET",
 					params);
+			
+			else
+			
+				json= jsonParser.makeHttpRequest(url_static_markers, "GET",
+				params);
+				
+				
 
 			// check for success tag
 			try {
@@ -447,6 +618,7 @@ public class Main extends FragmentActivity implements
 			for (int i = 0; i < markers.length(); i++) {
 				JSONObject c = null;
 				try {
+					
 					c = markers.getJSONObject(i);
 				} catch (JSONException e) {
 					e.printStackTrace();

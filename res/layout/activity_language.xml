@@ -1,56 +1,67 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C80000" >
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:padding="20sp"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Before We Start"
+        android:textColor="@color/apptheme_color"
+        android:textSize="32sp" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="72dp"
-        android:text="Which language will u choose?"
+        android:text="Please choose a language:"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold" />
+        android:textColor="@color/apptheme_color" />
 
-    <RadioGroup
-        android:id="@+id/radio_lang"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="118dp" >
+        android:padding="50sp"
+        
+        android:orientation="vertical" >
 
-        <RadioButton
-            android:id="@+id/radio_bangla"
+        <RadioGroup
+            android:id="@+id/radio_lang"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/radioBangla"
-            android:textColor="#FFFFFF"
-        	android:textStyle="bold"/>
+            android:layout_height="wrap_content" >
 
-        <RadioButton
-            android:id="@+id/radio_english"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/radioEnglish"
-            android:textColor="#FFFFFF"
-        	android:textStyle="bold" />
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/radio_bangla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/radioBangla"
+                android:textColor="@color/apptheme_color"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/radio_english"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radioEnglish"
+                android:textColor="@color/apptheme_color"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/lang_confirm"
-        android:layout_width="wrap_content"
+        android:layout_width="124dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="68dp"
-        android:text="Confirm"
+        android:layout_margin="10sp"
+        android:text="Continue"
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
 
-</RelativeLayout>
+</LinearLayout>

@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     
 	 <item
-        android:id="@+id/itemFirstAid"
-        android:icon="@drawable/ic_action_firstaid"
+        android:id="@+id/itemSearch"
+        android:icon="@drawable/ic_action_search"
         android:orderInCategory="100"
         android:showAsAction="always|withText"
         android:title="@string/first_aid">
